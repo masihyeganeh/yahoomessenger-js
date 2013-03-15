@@ -1,0 +1,48 @@
+{
+  "name": "yahoomessenger",
+  "version": "0.0.1Alpha",
+  "description": "Yahoo! Messenger in node",
+  "keywords": [
+    "Yahoo",
+    "messenger"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "preferGlobal": true,
+  "config": {
+    "publishtest": true
+  },
+  "homepage": "http://www.dogtag.ir/projects/yahoomessenger-js",
+  "author": "Masih Yeganeh <masihyeganeh@outlook.com> (http://dogtag.ir)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/masihyeganeh/yahoomessenger-js"
+  },
+  "bugs": {
+    "email": "masihyeganeh@outlook.com",
+    "url": "https://github.com/masihyeganeh/yahoomessenger-js/issues"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "index",
+  "engines": {
+    "node": ">=0.6",
+    "npm": ">=1"
+  },
+  "licenses": [
+    {
+      "type": "MIT +no-false-attribs",
+      "url": "https://raw.github.com/masihyeganeh/yahoomessenger-js/master/LICENSE"
+    }
+  ],
+  "contributors": [
+    "Masih Yeganeh <masihyeganeh@outlook.com> (http://dogtag.ir)"
+  ],
+  "maintainers": [
+    "Masih Yeganeh <masihyeganeh@outlook.com>"
+  ],
+  "bin": {},
+  "license": "MIT"
+}
