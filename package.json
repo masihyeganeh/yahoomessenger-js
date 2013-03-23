@@ -1,6 +1,6 @@
 {
   "name": "yahoomessenger",
-  "version": "0.0.1Alpha",
+  "version": "0.0.2Alpha",
   "description": "Yahoo! Messenger in node",
   "keywords": [
     "Yahoo",
