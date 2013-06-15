@@ -1,23 +1,28 @@
 {
   "name": "yahoomessenger",
-  "version": "0.0.2Alpha",
+  "version": "0.1.0Beta",
   "description": "Yahoo! Messenger in node",
   "keywords": [
     "Yahoo",
     "messenger"
   ],
-  "dependencies": {},
-  "devDependencies": {},
-  "optionalDependencies": {},
-  "preferGlobal": true,
-  "config": {
-    "publishtest": true
+  "dependencies": {
+    "require-all": "0.0.3"
+  },
+  "devDependencies": {
+    "docco":  "0.6.x",
+    "jshint": "2.0.x",
+    "mocha":  "1.9.x"
   },
   "homepage": "http://www.dogtag.ir/projects/yahoomessenger-js",
-  "author": "Masih Yeganeh <masihyeganeh@outlook.com> (http://dogtag.ir)",
+  "author": {
+    "name": "Masih Yeganeh",
+    "email": "masihyeganeh@outlook.com",
+    "url": "http://dogtag.ir"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/masihyeganeh/yahoomessenger-js"
+    "url": "https://github.com/masihyeganeh/yahoomessenger-js.git"
   },
   "bugs": {
     "email": "masihyeganeh@outlook.com",
@@ -31,6 +36,11 @@
     "node": ">=0.6",
     "npm": ">=1"
   },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "lint": "./node_modules/.bin/jshint --config=./jshint.json lib test",
+    "doc": "./node_modules/.bin/docco -o doc lib/*.js index.js"
+  },
   "licenses": [
     {
       "type": "MIT +no-false-attribs",
@@ -38,11 +48,19 @@
     }
   ],
   "contributors": [
-    "Masih Yeganeh <masihyeganeh@outlook.com> (http://dogtag.ir)"
+    {
+      "name": "Masih Yeganeh",
+      "email": "masihyeganeh@outlook.com",
+      "url": "http://dogtag.ir"
+    }
   ],
   "maintainers": [
-    "Masih Yeganeh <masihyeganeh@outlook.com>"
+    {
+      "name": "Masih Yeganeh",
+      "email": "masihyeganeh@outlook.com"
+    }
   ],
-  "bin": {},
-  "license": "MIT"
+  "license": "MIT",
+  "readme": "# YahooMessenger.js\r\n\r\nYahoo! Messenger in node.js\r\n\r\nThis is an alpha release.",
+  "readmeFilename": "README.md"
 }

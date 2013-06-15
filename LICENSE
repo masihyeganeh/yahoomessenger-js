@@ -1,4 +1,4 @@
-Copyright (c) Isaac Z. Schlueter (the "Original Author")
+Copyright (c) Masih Yeganeh (the "Original Author")
 All rights reserved.
 
 MIT +no-false-attribs License
@@ -49,17 +49,3 @@ this license.
 
 "npm Logo" created by Mathias Pettersson and Brian Hammond,
 used with permission.
-
-"Gubblebum Blocky" font
-Copyright (c) by Tjarda Koster, http://jelloween.deviantart.com
-included for use in the npm website and documentation,
-used with permission.
-
-This program uses "request", Copyright (c) Mikeal Rogers,
-according to the terms of the Apache license.
-
-This program uses "mkdirp",  Copyright (c) James Halliday,
-according to the terms of the MIT/X11 license.
-
-This program uses "opener", Copyright (c) Domenic Denicola,
-according to the terms of the DWTFPL2 license.
