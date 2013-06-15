@@ -7,7 +7,7 @@
     "messenger"
   ],
   "dependencies": {
-    "require-all": "0.0.3"
+    "require-all": "0.0.6"
   },
   "devDependencies": {
     "docco":  "0.6.x",
@@ -37,9 +37,7 @@
     "npm": ">=1"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec",
-    "lint": "./node_modules/.bin/jshint --config=./jshint.json lib test",
-    "doc": "./node_modules/.bin/docco -o doc lib/*.js index.js"
+    "lint": "./node_modules/.bin/jshint --config=./jshint.json lib test"
   },
   "licenses": [
     {
@@ -60,7 +58,6 @@
       "email": "masihyeganeh@outlook.com"
     }
   ],
-  "license": "MIT",
-  "readme": "# YahooMessenger.js\r\n\r\nYahoo! Messenger in node.js\r\n\r\nThis is an alpha release.",
+  "license": "MIT",  
   "readmeFilename": "README.md"
 }

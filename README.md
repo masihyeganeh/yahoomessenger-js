@@ -1,9 +1,9 @@
 YahooMessenger.js
 =================
 
-[![Build Status](https://travis-ci.org/masih/yahoomessenger.png)](https://travis-ci.org/masih/yahoomessenger)
+[![Build Status](https://travis-ci.org/masihyeganeh/yahoomessenger-js.png)](https://travis-ci.org/masihyeganeh/yahoomessenger-js)
 [![NPM version](https://badge.fury.io/js/yahoomessenger.png)](http://npmjs.org/package/yahoomessenger)
-[![Dependency Status](https://gemnasium.com/masihyeganeh/yahoomessenger-js.png)](https://gemnasium.com/masihyeganeh/yahoomessenger)
+[![Dependency Status](https://gemnasium.com/masihyeganeh/yahoomessenger-js.png)](https://gemnasium.com/masihyeganeh/yahoomessenger-js)
 
 Yahoo! Messenger in node.js
 
