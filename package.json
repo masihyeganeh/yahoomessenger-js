@@ -1,18 +1,18 @@
 {
   "name": "yahoomessenger",
-  "version": "0.1.0Beta",
+  "version": "0.1.1Beta",
   "description": "Yahoo! Messenger in node",
   "keywords": [
     "Yahoo",
     "messenger"
   ],
   "dependencies": {
-    "require-all": "0.0.6"
+    "require-all": "0.0.x"
   },
   "devDependencies": {
     "docco":  "0.6.x",
-    "jshint": "2.0.x",
-    "mocha":  "1.9.x"
+    "jshint": "2.1.x",
+    "mocha":  "1.11.x"
   },
   "homepage": "http://www.dogtag.ir/projects/yahoomessenger-js",
   "author": {
@@ -37,7 +37,8 @@
     "npm": ">=1"
   },
   "scripts": {
-    "lint": "./node_modules/.bin/jshint --config=./jshint.json lib test"
+    "lint": "./node_modules/.bin/jshint --config=./jshint.json lib",
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "licenses": [
     {

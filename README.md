@@ -173,5 +173,5 @@ BuddyInfoChanged
 TODOs
 -----
 
-* Write tests
+* Write more tests
 * Add more of Yahoo! functions
