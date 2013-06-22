@@ -54,7 +54,7 @@ After calling `newInstance` method, it generates a session in `YahooMessenger.se
 You can store session of each user in an array and change it before calling methods.
 Each event contains a `user_id` to distinguish response for multiple users.
 
-### Mutli User
+### Multi User
 
 Here is an example for multi user:
 ``` javascript
