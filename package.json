@@ -12,7 +12,8 @@
   "devDependencies": {
     "docco": "0.6.x",
     "jshint": "2.1.x",
-    "mocha": "1.11.x"
+    "mocha": "1.11.x",
+    "cap": "0.0.x"
   },
   "homepage": "http://www.dogtag.ir/projects/yahoomessenger-js",
   "author": {
@@ -25,11 +26,12 @@
     "url": "https://github.com/masihyeganeh/yahoomessenger-js.git"
   },
   "bugs": {
-    "email": "masihyeganeh@outlook.com",
-    "url": "https://github.com/masihyeganeh/yahoomessenger-js/issues"
+    "url": "https://github.com/masihyeganeh/yahoomessenger-js/issues",
+    "email": "masihyeganeh@outlook.com"
   },
   "directories": {
-    "lib": "./lib"
+    "lib": "./lib",
+    "dev": "./dev"
   },
   "main": "index",
   "engines": {
@@ -62,9 +64,9 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "readme": "YahooMessenger.js\r\n=================\r\n\r\n[![Build Status](https://travis-ci.org/masihyeganeh/yahoomessenger-js.png)](https://travis-ci.org/masihyeganeh/yahoomessenger-js)\r\n[![NPM version](https://badge.fury.io/js/yahoomessenger.png)](http://npmjs.org/package/yahoomessenger)\r\n[![Dependency Status](https://gemnasium.com/masihyeganeh/yahoomessenger-js.png)](https://gemnasium.com/masihyeganeh/yahoomessenger-js)\r\n\r\nYahoo! Messenger in node.js\r\n\r\nThis is a Beta release and is under development but some main features are ready to use.\r\n\r\nInstantiation\r\n-------------\r\n\r\nThis module consists of a singleton `YahooMessenger` class and a `sessionData` object for each user.\r\nFirst you need to include `YahooMessenger`\r\n\r\n``` javascript\r\nvar YahooMessenger = require('yahoomessenger');\r\n```\r\n\r\nThen for each user you need a new instance.\r\n\r\n``` javascript\r\nYahooMessenger.newInstance();\r\n```\r\nThen you will receive a `ready` event and it's ready to work with then.\r\n\r\nHow to use\r\n----------\r\n\r\n### Single User\r\n\r\nHere is an example for single user:\r\n``` javascript\r\nvar YahooMessenger = require('yahoomessenger');\r\nYahooMessenger.newInstance();\r\n\r\nYahooMessenger.on('ready', function onReady(){\r\n  YahooMessenger.login('Yahoo! ID', 'Yahoo! Password');\r\n});\r\n\r\nYahooMessenger.on('loginSuccessful', function onLoginSuccessful(data){\r\n  console.log('Welcome ' + data.firstname + ' ' + data.lastname);\r\n\r\n  YahooMessenger.sendPM('Friend Yahoo! ID', 'Hi. I am using YahooMessenger.js, It\\'s cool!');\r\n});\r\n```\r\n\r\nAs you can see, you can send requests to Yahoo! server by `YahooMessenger`'s public methods\r\nand receive responses by Events.\r\n\r\nAfter calling `newInstance` method, it generates a session in `YahooMessenger.sessionData`.\r\nYou can store session of each user in an array and change it before calling methods.\r\nEach event contains a `user_id` to distinguish response for multiple users.\r\n\r\n### Mutli User\r\n\r\nHere is an example for multi user:\r\n``` javascript\r\nvar users = {};\r\n\r\nvar YahooMessenger = require('yahoomessenger');\r\n\r\nYahooMessenger.newInstance();\r\nusers.ID1 = YahooMessenger.sessionData;\r\n\r\nYahooMessenger.newInstance();\r\nusers.ID2 = YahooMessenger.sessionData;\r\n\r\nYahooMessenger.on('ready', function onReady(data){\r\n  YahooMessenger.sessionData = users[data.user_id];\r\n\r\n  // do something\r\n});\r\n\r\n// ...\r\nYahooMessenger.sessionData = users.ID2;\r\nYahooMessenger.sendPM('someone', 'Hey! I\\'m User 2');\r\n\r\n```\r\n\r\n`YahooMessenger`'s methods are chainable.\r\n``` javascript\r\nYahooMessenger.addBuddy('ID', 'Group')\r\n  .sendPM('ID', 'Message')\r\n  .buzz('ID2')\r\n  .sendPM('ID3', 'Message');\r\n```\r\n\r\nIncoming Events\r\n---------------\r\n```\r\n# Internal\r\nping\r\n\r\n# Login\r\nloginSuccessful\r\n\r\n# Misc\r\nuserHasMail\r\nuserSendMessage\r\n\r\n# Chat\r\nchatLogin\r\nchatCaptcha\r\nchatJoin\r\nchatLoginError\r\nchatMessage\r\n\r\n# PM\r\npm\r\nofflinePM\r\nbuzz\r\n\r\n# Friends\r\nfriendsList\r\naddBuddy\r\nremoveBuddy\r\nbuddyAcceptAddRequest\r\nbuddyRejectAddRequest\r\nbuddyAddRequest\r\n\r\n# File Transfer\r\nfileTransferInvite\r\nfileTransferCancelled\r\nfileTransfer\r\n```\r\n\r\nOutgoing Methods\r\n----------------\r\n```\r\n# Internal\r\nkeepAlive\r\nping\r\n\r\n# Login\r\nlogin\r\nlogout\r\n\r\n# Chat\r\nchatLogin\r\nchatJoin\r\ngetChatCategories\r\ngetChatRooms\r\nsendPublicChatMessage\r\nchatLogout\r\n\r\n# Avatar\r\ngetBuddyImageByAvatarHash\r\ngetBuddyImageByProfileHash\r\ngetBuddyImage\r\n\r\n# File Transfer\r\nacceptFileTransfer\r\ndeclineFileTransfer\r\nfileTransferGetFile\r\nreceiveFile\r\ncancelFileReceive\r\n\r\n# PM\r\nsendPM\r\nbuzz\r\nsendTyping\r\n\r\n# Friends\r\naddBuddy\r\nacceptAddBuddy\r\nrejectAddBuddy\r\nBuddyInfoChanged\r\n```\r\n\r\nTODOs\r\n-----\r\n\r\n* Write more tests\r\n* Add more of Yahoo! functions\r\n",
-  "_id": "yahoomessenger@0.1.1Beta",
+  "_id": "yahoomessenger@0.1.2Beta",
   "dist": {
     "shasum": "dc84f72c55ca811c6d02ec07f64c4dd05f1c1d76"
   },
-  "_from": "yahoomessenger@*"
+  "_from": "yahoomessenger@"
 }
