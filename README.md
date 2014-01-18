@@ -96,6 +96,7 @@ ping
 
 # Login
 loginSuccessful
+loginError
 
 # Misc
 userHasMail
