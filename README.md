@@ -169,6 +169,10 @@ addBuddy
 acceptAddBuddy
 rejectAddBuddy
 BuddyInfoChanged
+
+# Status
+setAwayStatus
+setCustomAwayStatus
 ```
 
 TODOs
